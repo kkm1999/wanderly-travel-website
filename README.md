@@ -1,12 +1,12 @@
 # ✈️ Wanderly — Travel Beyond the Ordinary
 
-A premium, responsive travel discovery website designed as a Front-End Developer recruitment task for Young Edsplorer.
+A premium, responsive travel discovery website designed as a Front-End Developer recruitment task.
 
 Wanderly is designed around the idea that travel should feel personal. Instead of presenting destinations as a simple list, the experience lets users discover trips based on their mood, explore curated destinations, and use a smart local travel-matching experience to find an escape.
 
 ## 🌐 Live Demo
 
-> Coming soon — deployed on Vercel
+https://wanderly-travel-website-five.vercel.app/
 
 ## 📦 GitHub Repository
 
