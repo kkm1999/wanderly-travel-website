@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap");
+
+@import "tailwindcss";
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #17201c;
+  background: #f7f6f2;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 20px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f7f6f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a,
+select,
+input {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a {
+  outline-offset: 4px;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid #6ee7b7;
+  outline-offset: 3px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.font-display {
+  font-family: "Playfair Display", serif;
+}
+
+/* ---------------------------------
+   Hero cinematic movement
+---------------------------------- */
+
+@keyframes heroZoom {
+  0%,
+  100% {
+    transform: scale(1.03);
+  }
+
+  50% {
+    transform: scale(1.07);
+  }
+}
+
+.hero-image {
+  animation: heroZoom 18s ease-in-out infinite;
+}
+
+/* ---------------------------------
+   Hero scroll cue
+---------------------------------- */
+
+@keyframes scrollCueIn {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 18px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes scrollDot {
+  0% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+}
+
+.scroll-cue {
+  animation: scrollCueIn 0.8s ease-out 1.2s both;
+}
+
+.scroll-dot {
+  animation: scrollDot 1.8s ease-in-out infinite;
+}
+
+/* ---------------------------------
+   Text selection
+---------------------------------- */
+
+::selection {
+  background: #a7f3d0;
+  color: #17201c;
+}
+
+/* ---------------------------------
+   Reduced motion accessibility
+---------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-image,
+  .scroll-cue,
+  .scroll-dot {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------------------------------
+   Small screen adjustments
+---------------------------------- */
+
+@media (max-width: 640px) {
+  .hero-image {
+    animation-duration: 24s;
+  }
+}
